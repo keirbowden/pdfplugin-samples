@@ -10,7 +10,7 @@ Set the `PUPPETEER_EXECUTABLE_PATH` environment variable to the location of your
 
 ### MacOS 
 
-`export PUPPETEER_EXECUTABLE_PATH=<location>`
+`export PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`
 
 
 ### Windows 10
@@ -27,4 +27,18 @@ MacOS:
 
 Windows: 
 
-`sfdx bbpdf:pdf -d ./templates -t contacts.ejs -o ./contacts.pdf -u <username> -f ./queries/contacts.json`
+`sfdx bbpdf:pdf -d .\templates -t contacts.ejs -o .\contacts.pdf -u <username> -f .\queries/contacts.json`
+
+Replacing `<username>` with the alias for a Salesforce org you have previously authenticated against.
+
+## Generating a PDF containing details of a contact and a separate account
+
+Note the sample query file (`contacts-and-accounts.json` in the `queries` folder) contains Ids from one of my dev orgs - update these to refer to an account and contact from the org whose alias you pass to the command.
+
+MacOS: 
+
+`sfdx bbpdf:pdf -d ./templates -t contact.ejs -o ./contact.pdf -u <username> -f ./queries/contact-and-account.json`
+
+Windows: 
+
+`sfdx bbpdf:pdf -d .\templates -t contact.ejs -o .\contact.pdf -u <username> -f .\queries\contact-and-account.json`
