@@ -1,0 +1,10 @@
+{
+    "contact": {
+        "single": true,
+        "query": "select Title, FirstName, LastName from Contact where id='00380000023TUDeAAO'"
+    },
+    "account": {
+        "single": true,
+        "query": "select id, Name from Account where id='0018000000eqTV7AAM'"
+    }
+}

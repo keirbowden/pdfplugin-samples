@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Contacts</h1>
+        <table class="table table-striped">
+            <tr>
+                <th><b>Id</b></th>
+                <th><b>Title</b></th>
+                <th><b>First Name</b></th> 
+                <th><b>Last Name</b></th> 
+                <th><b>Company</b></th> 
+            </tr>
+            <% contacts.forEach(contact => { %>
+                <tr>
+                    <td><%= contact.Id %></td>
+                    <td><%= contact.Title %></td>
+                    <td><%= contact.FirstName %></td>
+                    <td><%= contact.LastName %></td> 
+                    <td>
+                        <% if (contact.Account) { %>
+                        <%= contact.Account.Name %>
+                        <% } else { %>
+                        <%= 'N/A' %>
+                        <% }; %>
+                    </td> 
+                </tr>
+            <% }); %> 
+        </table>
+    </body>
+</html>

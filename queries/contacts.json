@@ -1,0 +1,6 @@
+{
+    "contacts":{
+        "single": false,
+        "query": "select Id, Title, FirstName, LastName, Account.Name from Contact limit 10"
+    } 
+}
