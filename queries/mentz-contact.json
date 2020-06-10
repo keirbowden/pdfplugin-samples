@@ -1,0 +1,6 @@
+{
+    "contact": {
+        "single": true,
+        "query": "select FirstName, LastName, Email from Contact where id='0031E00002RyBNyQAN'"
+    }
+}

@@ -31,14 +31,28 @@ Windows:
 
 Replacing `<username>` with the alias for a Salesforce org you have previously authenticated against.
 
-## Generating a PDF containing details of a contact and a separate account
+## Generating a PDF containing details of a contact and its account via separate queries
 
 Note the sample query file (`contacts-and-accounts.json` in the `queries` folder) contains Ids from one of my dev orgs - update these to refer to an account and contact from the org whose alias you pass to the command.
 
 MacOS: 
 
-`sfdx bbpdf:pdf -d ./templates -t contact.ejs -o ./contact.pdf -u <username> -f ./queries/contact-and-account.json`
+`sfdx bbpdf:pdf -d ./templates -t contact-and-account.ejs -o ./contact-and-account.pdf -u <username> -f ./queries/contact-and-account.json`
 
 Windows: 
 
-`sfdx bbpdf:pdf -d .\templates -t contact.ejs -o .\contact.pdf -u <username> -f .\queries\contact-and-account.json`
+`sfdx bbpdf:pdf -d .\templates -t contact-and-account.ejs -o .\contact-and-account.pdf -u <username> -f .\queries\contact-and-account.json`
+
+## Using images
+
+Images must be located relative to the EJS template - in this example the EJS template `templates/mentz-contact.ejs` includes the image `./images/Mentz.png`.
+
+Note the sample query file (`mentz-contact.json` in the `queries` folder) contains an Id from one of my dev orgs - update these to refer to a contact from the org whose alias you pass to the command.
+
+MacOS: 
+
+`sfdx bbpdf:pdf -d ./templates -t mentz-contact.ejs -o ./mentz-contact.pdf -u <username> -f ./queries/mentz-contact.json`
+
+Windows: 
+
+`sfdx bbpdf:pdf -d .\templates -t mentz-contact.ejs -o .\mentz-contact.pdf -u <username> -f .\queries\mentz-contact.json`
